@@ -20,6 +20,6 @@ if args.version:
     print("Version: %s \"%s\"" % (version, codename))
 elif args.tweet:
     if args.image:
-        twitter.send(args.tweet, args.image)
+        twitter.post(args.tweet, args.image)
     else:
-        twitter.send(args.tweet)
+        twitter.post(args.tweet)

@@ -7,11 +7,11 @@
 import sys
 
 class color:
-    none = '\033[0m'
-    bold = '\033[1m'
-    red = '\033[91m'
-    green = '\033[92m'
-    yellow = '\033[93m'
+    none = "\033[0m"
+    bold = "\033[1m"
+    red = "\033[91m"
+    green = "\033[92m"
+    yellow = "\033[93m"
 
 def info(message):
     print(color.green + "[INFO]: %s" % message + color.none)
