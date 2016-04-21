@@ -1,19 +1,22 @@
 # Poster!
 
-Post a mensaje, anywhere!
+Post a mensaje, *anywhere*!
 
-### Da great ***TODO***:
+### Da great *TODO*:
 
-- [ ] User interface
 - [ ] Services:
-	- [ ] **Working on**:
-		- [ ] Twitter
-		  - [x] Allow user authentication
-		  - [x] Allow simple text tweets
-		  - [ ] Allow uploading images
-		  - [ ] Allow everything as possible (thanks, Twitter privative API!)
-	- [ ] To start working:
-		- [ ] Facebook
-		- [ ] Google+
-		- [ ] Pastebin
-		- [ ] Give me ideas! :smile:
+    - [ ] **Working on**:
+        - [ ] Twitter
+          - [x] Allow user authentication
+          - [x] Allow simple text tweets
+          - [ ] Allow uploading images
+    - [ ] To start working:
+        - [ ] Facebook
+        - [ ] Google+
+        - [ ] Pastebin
+        - [ ] Give me ideas! :smile:
+- [ ] User interface
+
+### License
+
+Poster is released under the GNU General Public License version 2.
