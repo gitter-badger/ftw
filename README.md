@@ -8,7 +8,7 @@ Post a mensaje, anywhere!
 - [ ] Services:
 	- [ ] **Working on**:
 		- [ ] Twitter
-		  - [ ] Allow user authentication
+		  - [x] Allow user authentication
 		  - [x] Allow simple text tweets
 		  - [ ] Allow uploading images
 		  - [ ] Allow everything as possible (thanks, Twitter privative API!)

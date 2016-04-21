@@ -4,14 +4,14 @@
 # Twitter module for Poster!
 #
 
-from TwitterAPI import TwitterAPI
+import os
+import twitter
 from .echo import error, info
 
-api = TwitterAPI("hQGQlPsTIN7iIsLVe6aHXycF0",
-                 "3vZ7Q1kPf3zkIBJEKxEL9FJr9WItEzmMz8ZjiU6Ozxm3tnSjJF",
-                 "2318747108-UV0gtMlxxoEybK8EkMCmzkIZ8mmNP4ER4Blnlor", # Only me can use it, by now...
-                 "926khkT44bHsXpqQI6SuwhGqTSyWMK9WwV2pvi3tMNMku"       # check "da great TODO" on README.md
-                )
+
+
+
+twitter = twitter.Twitter(auth=twitter.OAuth(oauth_token, oauth_secret, "hQGQlPsTIN7iIsLVe6aHXycF0", "3vZ7Q1kPf3zkIBJEKxEL9FJr9WItEzmMz8ZjiU6Ozxm3tnSjJF"))
 
 def send(tweet_text):
     """
@@ -22,15 +22,11 @@ def send(tweet_text):
         error("Your tweet needs to be 140 characters maximium!", 1)
 
     # Da Status sending magic
-    tweet = api.request("statuses/update", {"status": tweet_text})
+    twitter.statuses.update(status=tweet_text)
 
     """
     If the sent was sucessfully (twitter.status_code = 200), print a
     message, instead, raise a error with the obtained status_code.
     """
     info("Sending tweet: %s" % tweet_text)
-
-    if tweet.status_code == 200:
-        info("Sent sucessfully!")
-    else:
-        error("Failed to sent tweet! Obtained status %s" % tweet.status_code, 1)
+    info("Sent sucessfully!")
