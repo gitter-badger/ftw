@@ -24,13 +24,7 @@ def send(tweet_text):
     """
     if len(tweet_text) > 139:
         error("Your tweet needs to be 140 characters maximium!", 1)
-
-    # Da Status sending magic
-    twitter.statuses.update(status=tweet_text)
-
-    """
-    If the sent was sucessfully (twitter.status_code = 200), print a
-    message, instead, raise a error with the obtained status_code.
-    """
-    info("Sending tweet: %s" % tweet_text)
-    info("Sent sucessfully!")
+    else:
+        info("Sending tweet: %s" % tweet_text)
+        twitter.statuses.update(status=tweet_text)
+        info("Sent sucessfully!")
