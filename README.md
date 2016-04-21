@@ -1,4 +1,4 @@
-# Poster!
+# Poster
 
 Post a mensaje, *anywhere*!
 
@@ -9,7 +9,7 @@ Post a mensaje, *anywhere*!
         - [ ] Twitter
           - [x] Allow user authentication
           - [x] Allow simple text tweets
-          - [ ] Allow uploading images
+          - [ ] Allow uploading images (**HELP NEEDED**)
     - [ ] To start working:
         - [ ] Facebook
         - [ ] Google+
