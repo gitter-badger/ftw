@@ -24,9 +24,6 @@ def error(msg, code):
 def warning(msg):
     print(color.yellow + "[WARNING]: %s" % msg + color.none)
 
-def debug(msg):
-    print(color.yellow + "[DEBUG]: %s" % msg + color.none)
-
 def version(ver, name):
     print("version: %s \"%s\"" % (ver, name))
     sys.exit(0)

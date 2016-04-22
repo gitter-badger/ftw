@@ -4,10 +4,10 @@ Terminal tweeting, *FTW*! :smile:.
 
 ### Da great *TODO*:
 
-- [x] Allow user authentication
-- [x] Allow simple text tweets
-- [x] Allow uploading images (**HELP NEEDED**)
-- [x] ***RELEASE DAT 1.0!!!***
+- [x] Allow user authentication.
+- [x] Allow simple text tweets.
+- [x] Allow uploading images.
+- [x] ***RELEASE DAT 1.0!!!***.
 
 ### Da *License*:
 

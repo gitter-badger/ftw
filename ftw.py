@@ -10,9 +10,9 @@ from modules import twitter, echo
 version = 1.0
 codename = "Albatross"
 
-parser = argparse.ArgumentParser(prog="ftw", description="Terminal tweeting, FTW!", usage="%(prog)s \"TEXT\" [--image \"FILE\"""]")
+parser = argparse.ArgumentParser(prog="ftw", description="terminal tweeting, FTW!", usage="%(prog)s \"text\" [--image file]")
 parser.add_argument("text", type=str, nargs="?", help="tweet text")
-parser.add_argument("--image", metavar="\"FILE\"", help="add a image")
+parser.add_argument("--image", metavar="file", help="add a image")
 parser.add_argument("--version", action="store_true", help="Fast Tweet version")
 
 args = parser.parse_args()
