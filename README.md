@@ -10,7 +10,7 @@
 
 - The `ftw` program.
 - The `fastw` libraries:
-  - `twitter`: a wrapper around the @sixohsix's `twitter` module.
+  - `twitter`: a wrapper around the [@sixohsix's `twitter` module](https://github.com/sixohsix/twitter).
   - `echo`: my custom modifications for the `print()` function.
 
 ### Dependencies:
