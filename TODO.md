@@ -2,7 +2,8 @@
 
 - [ ] Allow updating from 1 to 4 image files.
 - [x] Add Windows native package.
-- [x] Make it installable.
+- [ ] Make it installable.
+	- [ ] Make it runnable.
 
 ##### For 1.0: DONE!
 
