@@ -5,7 +5,8 @@
 #
 
 import argparse
-from modules import twitter, echo
+from fastw import twitter
+from fastw import echo
 
 version = 1.0
 codename = "Albatross"

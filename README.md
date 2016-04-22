@@ -8,18 +8,7 @@ Terminal tweeting, *FTW*! :smile:.
 
 ### Da *TODO*:
 
-###### For 1.1:
-
-- [ ] Allow updating from 1 to 4 image files.
-- [ ] Add Windows native package.
-- [ ] Make it installable.
-
-##### For 1.0: DONE!
-
-- [x] Allow user authentication.
-- [x] Allow simple text tweets.
-- [x] Allow uploading images.
-- [x] ***RELEASE DAT 1.0!!!***.
+Check da [TODO.md](https://github.com/feskyde/ftw/blob/master/TODO.md) file.
 
 ### Da *releases*:
 
