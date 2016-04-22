@@ -23,22 +23,22 @@ def check_chars(text, lenght):
     """
     check = lenght - 1
     if len(text) > check:
-            error("Your tweet needs to be %s characters maximium!" % lenght, 1)
+            error("your tweet needs to be %s characters maximium!" % lenght, 1)
 
 class post:
     def text_only(text):
         check_chars(text, 140)
-        info("Sending tweet: %s" % text)
+        info("sending tweet: %s" % text)
         twitter.statuses.update(status=text)
-        info("Sent sucessfully!")
+        info("sent sucessfully!")
 
     def with_image(text, image):
         check_chars(text, 140)
-        info("Adding image: %s" % image)
+        info("adding image: %s" % image)
         with open(image, "rb") as image_file:
             image_data = image_file.read()
         upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, "hQGQlPsTIN7iIsLVe6aHXycF0", "3vZ7Q1kPf3zkIBJEKxEL9FJr9WItEzmMz8ZjiU6Ozxm3tnSjJF"))
         image_id = upload_to.media.upload(media=image_data)["media_id_string"]
-        info("Sending tweet: %s" % text)
+        info("sending tweet: %s" % text)
         twitter.statuses.update(status=text, media_ids=",".join([image_id]))
-        info("Sent sucessfully!")
+        info("sent sucessfully!")

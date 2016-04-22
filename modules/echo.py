@@ -13,20 +13,20 @@ class color:
     green = "\033[92m"
     yellow = "\033[93m"
 
-def info(message):
-    print(color.green + "[INFO]: %s" % message + color.none)
+def info(msg):
+    print(color.green + "[INFO]: %s" % msg + color.none)
 
-def error(message, code):
-    print(color.red + "[ERROR]: %s" % message + color.none)
-    print(color.red + "[ERROR]: Exiting with code %i" % code + color.none)
+def error(msg, code):
+    print(color.red + "[ERROR]: %s" % msg + color.none)
+    print(color.red + "[ERROR]: exiting with code %i" % code + color.none)
     sys.exit(code)
 
-def warning(message):
-    print(color.yellow + "[WARNING]: %s" % message + color.none)
+def warning(msg):
+    print(color.yellow + "[WARNING]: %s" % msg + color.none)
 
-def debug(message):
-    print(color.yellow + "[DEBUG]: %s" % message + color.none)
+def debug(msg):
+    print(color.yellow + "[DEBUG]: %s" % msg + color.none)
 
-def version(version, codename):
-    print(color.bold + "Version: %s \"%s\"" % (version, codename) + color.none)
+def version(ver, name):
+    print("version: %s \"%s\"" % (ver, name))
     sys.exit(0)
