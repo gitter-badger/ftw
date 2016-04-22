@@ -34,7 +34,7 @@ Check the [TODO.md](https://github.com/feskyde/ftw/blob/master/TODO.md) file.
 | Status | Release | Date | Download |
 |--------|---------|------|----------|
 | **Current** | 1.0 | 04/21/2016 | [ZIP](https://github.com/feskyde/ftw/archive/ftw-1.0.zip) |
-| **Development** | 1.1 | *I don't know* | *Not available* |
+| **Development** | 1.0.1 | *I don't know* | *Not available* |
 
 ### License:
 

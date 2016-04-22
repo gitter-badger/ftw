@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Fast Tweet 1.1
+# Fast Tweet 1.0.1
 #
 
 import argparse
 from fastw import twitter
 from fastw import echo
 
-version = "1.1"
+version = "1.0.1"
 codename = "Budgie"
 
 parser = argparse.ArgumentParser(prog="ftw", description="terminal tweeting, ftw!", usage="%(prog)s \"text\" [--image file]")

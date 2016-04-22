@@ -1,4 +1,4 @@
-##### 1.1:
+##### 1.0.1:
 
 - [ ] Allow updating from 1 to 4 image files.
 - [x] Add Windows native package.

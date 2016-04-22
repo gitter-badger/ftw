@@ -10,7 +10,7 @@ def readme():
         return f.read()
 
 setup(name="ftw",
-      version="1.1",
+      version="1.0.1",
       description="Terminal tweeting, FTW!",
       long_description=readme(),
       keywords="twitter terminal ftw tweet",
