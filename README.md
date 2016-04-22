@@ -40,7 +40,8 @@ Check the [TODO.md](https://github.com/feskyde/ftw/blob/master/TODO.md) file.
 
 **Fast Tweet** is released under the GNU General Public License version 2.
 
-##### Footnotes [2](#footnotes-2):
+#### Footnotes [2](#footnotes-2):
 
 <a name="footnotes-1">1</a>: I'm waiting for `systemd` creating a `tweetctl`/`systemd-tweet` module (**spoilers**: they will do it).
-<a name="footnotes-2">2</a>: 'Cause GitHub friends does not support them.
+
+<a name="footnotes-2">2</a>: 'Cause my dear GitHub friends does not support them.
