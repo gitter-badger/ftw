@@ -12,11 +12,11 @@ twitter_creds = os.path.expanduser("~/.ftw_credentials")
 if not os.path.exists(twitter_creds):
     oauth_dance("Fast Tweet on Shell", "hQGQlPsTIN7iIsLVe6aHXycF0", "3vZ7Q1kPf3zkIBJEKxEL9FJr9WItEzmMz8ZjiU6Ozxm3tnSjJF", twitter_creds)
 
-oauth_token, oauth_secret = read_token_file(twitter_creds)
+token, token_key = read_token_file(twitter_creds)
 
-twitter = Twitter(auth=OAuth(oauth_token, oauth_secret, "hQGQlPsTIN7iIsLVe6aHXycF0", "3vZ7Q1kPf3zkIBJEKxEL9FJr9WItEzmMz8ZjiU6Ozxm3tnSjJF"))
+twitter = Twitter(auth=OAuth(token, token_key, "hQGQlPsTIN7iIsLVe6aHXycF0", "3vZ7Q1kPf3zkIBJEKxEL9FJr9WItEzmMz8ZjiU6Ozxm3tnSjJF"))
 
-def check_chars(lenght):
+def check_chars(text, lenght):
     """
     Check the lenght of the tweet and if it have less of 'lenght' characters,
     send it, instead, raise a error througt echo.error() function.
@@ -27,18 +27,18 @@ def check_chars(lenght):
 
 class post:
     def text_only(text):
-        check_chars(140)
+        check_chars(text, 140)
         info("Sending tweet: %s" % text)
         twitter.statuses.update(status=text)
         info("Sent sucessfully!")
 
     def with_image(text, image):
-        check_chars(140)
+        check_chars(text, 140)
         info("Adding image: %s" % image)
         with open(image, "rb") as image_file:
             image_data = image_file.read()
-        upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, con_secret, con_secret_key))
+        upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, "hQGQlPsTIN7iIsLVe6aHXycF0", "3vZ7Q1kPf3zkIBJEKxEL9FJr9WItEzmMz8ZjiU6Ozxm3tnSjJF"))
         image_id = upload_to.media.upload(media=image_data)["media_id_string"]
         info("Sending tweet: %s" % text)
-        twitter.statuses.update(status=text, media_ids=",".join(image_id))
+        twitter.statuses.update(status=text, media_ids=",".join([image_id]))
         info("Sent sucessfully!")

@@ -14,8 +14,8 @@ codename = "Albatross"
 parser = argparse.ArgumentParser(prog="ftw", description="Terminal tweeting, FTW!",
                                  usage="%(prog)s \"TEXT\" [--image FILE]")
 parser.add_argument("-v", "--version",
-                    action="store_true", help="Poster version")
-parser.add_argument("text", type=str, nargs="+", help="Tweet text")
+                    action="store_true", help="Fast Tweet version")
+parser.add_argument("text", type=str, nargs="?", help="Tweet text")
 parser.add_argument("--image", metavar="FILE", help="Add a image to your tweet")
 
 args = parser.parse_args()
