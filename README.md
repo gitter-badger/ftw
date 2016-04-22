@@ -4,7 +4,7 @@
 
 **In short words**: Terminal tweeting, **FTW**! :smile:.
 
-**In long words**: A tweeting client without shiny prompts, bright letters or fireworks, just a single command for a single tweet (yeah, UNIX style![^1]).
+**In long words**: A tweeting client without shiny prompts, bright letters or fireworks, just a single command for a single tweet (yeah, UNIX style! [1](#footnotes-1)).
 
 ### Includes:
 
@@ -40,4 +40,7 @@ Check the [TODO.md](https://github.com/feskyde/ftw/blob/master/TODO.md) file.
 
 **Fast Tweet** is released under the GNU General Public License version 2.
 
-[^1]: I'm waiting for `systemd` creating a `tweetctl`/`systemd-tweet` module (**spoilers**: they will do it).
+##### Footnotes [2](#footnotes-2):
+
+<a name="footnotes-1">1</a>: I'm waiting for `systemd` creating a `tweetctl`/`systemd-tweet` module (**spoilers**: they will do it).
+<a name="footnotes-2">2</a>: 'Cause GitHub friends does not support them.
