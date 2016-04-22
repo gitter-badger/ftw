@@ -1,10 +1,10 @@
-###### For 1.1:
+##### 1.1:
 
 - [ ] Allow updating from 1 to 4 image files.
 - [x] Add Windows native package.
 - [x] Make it installable.
 
-##### For 1.0: DONE!
+##### 1.0:
 
 - [x] Allow user authentication.
 - [x] Allow simple text tweets.
