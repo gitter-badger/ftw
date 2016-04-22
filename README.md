@@ -1,13 +1,14 @@
-# *F*ast *Tw*eet (ftw)
+# *F*ast *Tw*eet
 
-Terminal tweeting, FTW! :smile:.
+Terminal tweeting, *FTW*! :smile:.
 
 ### Da great *TODO*:
 
 - [x] Allow user authentication
 - [x] Allow simple text tweets
-- [ ] Allow uploading images (**HELP NEEDED**)
+- [x] Allow uploading images (**HELP NEEDED**)
+- [x] ***RELEASE DAT 1.0!!!***
 
-### License
+### Da *License*:
 
 Fast Tweet is released under the GNU General Public License version 2.
