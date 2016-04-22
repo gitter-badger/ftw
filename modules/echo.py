@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Print function modifications for Poster
+# Print function modifications for Fast Tweet
 #
 
 import sys
@@ -22,4 +22,11 @@ def error(message, code):
     sys.exit(code)
 
 def warning(message):
-    print(color.yellow + "[WARNING]: %s" + color.none % message)
+    print(color.yellow + "[WARNING]: %s" % message + color.none)
+
+def debug(message):
+    print(color.yellow + "[DEBUG]: %s" % message + color.none)
+
+def version(version, codename):
+    print(color.bold + "Version: %s \"%s\"" % (version, codename) + color.none)
+    sys.exit(0)

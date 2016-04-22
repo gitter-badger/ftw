@@ -1,22 +1,13 @@
-# Poster
+# *F*ast *Tw*eet (ftw)
 
-Post a mensaje, *anywhere*!
+Terminal tweeting, FTW! :smile:.
 
 ### Da great *TODO*:
 
-- [ ] Services:
-    - [ ] **Working on**:
-        - [ ] Twitter
-          - [x] Allow user authentication
-          - [x] Allow simple text tweets
-          - [ ] Allow uploading images (**HELP NEEDED**)
-    - [ ] To start working:
-        - [ ] Facebook
-        - [ ] Google+
-        - [ ] Pastebin
-        - [ ] Give me ideas! :smile:
-- [ ] User interface
+- [x] Allow user authentication
+- [x] Allow simple text tweets
+- [ ] Allow uploading images (**HELP NEEDED**)
 
 ### License
 
-Poster is released under the GNU General Public License version 2.
+Fast Tweet is released under the GNU General Public License version 2.
