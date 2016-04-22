@@ -1,6 +1,9 @@
-##### 1.0.1:
+##### Next:
 
 - [ ] Allow updating from 1 to 4 image files.
+
+##### 1.0.1:
+
 - [x] Add Windows native package.
 - [x] Make it installable.
 
