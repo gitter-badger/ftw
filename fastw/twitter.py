@@ -17,13 +17,10 @@ token, token_key = read_token_file(twitter_creds)
 twitter = Twitter(auth=OAuth(token, token_key, "hQGQlPsTIN7iIsLVe6aHXycF0", "3vZ7Q1kPf3zkIBJEKxEL9FJr9WItEzmMz8ZjiU6Ozxm3tnSjJF"))
 
 def check_chars(text, lenght):
-    """
-    Check the lenght of the tweet and if it have less of 'lenght' characters,
-    send it, instead, raise a error througt echo.error() function.
-    """
-    check = lenght - 1
-    if len(text) > check:
-            error("your tweet needs to be %s characters maximium!" % lenght, 1)
+    if len(text) > lenght:
+        error("your tweet needs to be %s characters maximium!" % lenght, 1)
+    if len(text) == 0:
+        error("please write something in your tweet", 1)
 
 class post:
     def text_only(text):
