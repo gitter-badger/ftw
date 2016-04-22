@@ -14,15 +14,15 @@ class color:
     yellow = "\033[93m"
 
 def info(msg):
-    print(color.green + "[INFO]: %s" % msg + color.none)
+    print(color.green + "[info] %s" % msg + color.none)
 
 def error(msg, code):
-    print(color.red + "[ERROR]: %s" % msg + color.none)
-    print(color.red + "[ERROR]: exiting with code %i" % code + color.none)
+    print(color.red + "[error] %s" % msg + color.none)
+    print(color.red + "[error] exiting with code %i" % code + color.none)
     sys.exit(code)
 
 def warning(msg):
-    print(color.yellow + "[WARNING]: %s" % msg + color.none)
+    print(color.yellow + "[warning] %s" % msg + color.none)
 
 def version(ver, name):
     print("version: %s \"%s\"" % (ver, name))
