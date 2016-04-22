@@ -2,9 +2,7 @@
 
 - [ ] Allow updating from 1 to 4 image files.
 - [x] Add Windows native package.
-- [ ] Make it installable.
-  - [x] `setup.py` file.
-  - [ ] Windows autoinstall.
+- [x] Make it installable.
 
 ##### For 1.0: DONE!
 
