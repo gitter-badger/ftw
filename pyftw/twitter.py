@@ -43,25 +43,25 @@ class post:
         info("sending tweet: {}".format(text))
         info("adding images: {}".format(images))
         image_ids = []
-        if len(images) > 1:
+        if len(images) >= 1:
             with open(images[0], "rb") as image_file:
                 image_data = image_file.read()
             upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
             image_id_1 = upload_to.media.upload(media=image_data)["media_id_string"]
             image_ids.append(image_id_1)
-        if len(images) == 2 and images[1]:
+        if len(images) >= 2:
             with open(images[1], "rb") as image_file:
                 image_data = image_file.read()
             upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
             image_id_2 = upload_to.media.upload(media=image_data)["media_id_string"]
             image_ids.append(image_id_2)
-        if len(images) == 3 and images[2]:
+        if len(images) >= 3:
             with open(images[2], "rb") as image_file:
                 image_data = image_file.read()
             upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
             image_id_3 = upload_to.media.upload(media=image_data)["media_id_string"]
             image_ids.append(image_id_3)
-        if len(images) == 4 and images[3]:
+        if len(images) >= 4:
             with open(images[3], "rb") as image_file:
                 image_data = image_file.read()
             upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
