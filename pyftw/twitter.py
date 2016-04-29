@@ -61,7 +61,7 @@ class post:
             upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
             image_id_3 = upload_to.media.upload(media=image_data)["media_id_string"]
             image_ids.append(image_id_3)
-        if len(images) >= 4:
+        if len(images) == 4:
             with open(images[3], "rb") as image_file:
                 image_data = image_file.read()
             upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
