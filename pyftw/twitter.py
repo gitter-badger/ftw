@@ -38,12 +38,12 @@ class post:
         twitter.statuses.update(status=text, media_ids=",".join([image_id]))
         info("sent sucessfully!")
 
-    def multi_images(text, images):
+    def multi_images(text, images, max_number):
         check_chars(text, 140)
         info("sending tweet: %s" % text)
         info("adding images: %s" % images)
-        if len(images) == number:
-            error("maximium images: %s!" % number, 1)
+        if len(images) == max_number:
+            error("maximium images: %s!" % max_number, 1)
         for image in images:
             with open(image, "rb") as image_file:
                 image_data = image_file.read()

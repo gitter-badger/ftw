@@ -25,6 +25,6 @@ else:
     	if len(args.image) == 1:
     		twitter.post.one_image(args.text, args.image)
     	elif len(args.image) >= 2:
-    		twitter.post.multi_images(args.text, args.image)
+    		twitter.post.multi_images(args.text, args.image, 4)
     else:
     	twitter.post.text_only(args.text)
