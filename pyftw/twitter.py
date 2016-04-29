@@ -23,14 +23,14 @@ twitter = Twitter(auth=OAuth(token, token_key, key, key_secret))
 class post:
     def text_only(text):
         check_chars(text, 140)
-        info("sending tweet: %s" % text)
+        info("sending tweet: {}".format(text))
         twitter.statuses.update(status=text)
         info("sent sucessfully!")
 
     def one_image(text, image):
         check_chars(text, 140)
-        info("sending tweet: %s" % text)
-        info("adding image: %s" % image)
+        info("sending tweet: {}".format(text))
+        info("adding image: {}".format(image))
         with open(image, "rb") as image_file:
             image_data = image_file.read()
         upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
@@ -38,12 +38,10 @@ class post:
         twitter.statuses.update(status=text, media_ids=",".join([image_id]))
         info("sent sucessfully!")
 
-    def multi_images(text, images, max_number):
+    def multi_images(text, images):
         check_chars(text, 140)
-        info("sending tweet: %s" % text)
-        info("adding images: %s" % images)
-        if len(images) == max_number:
-            error("maximium images: %s!" % max_number, 1)
+        info("sending tweet: {}".format(text))
+        info("adding images: {}".format(images))
         for image in images:
             with open(image, "rb") as image_file:
                 image_data = image_file.read()

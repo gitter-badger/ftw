@@ -6,6 +6,6 @@
 
 def check_chars(text, lenght):
     if len(text) > lenght:
-        error("your tweet needs to be %s characters maximium!" % lenght, 1)
+        error("your tweet needs to be {} characters maximium!".format(lenght), 1)
     if len(text) == 0:
         error("please write something in your tweet", 1)

@@ -20,11 +20,12 @@ args = parser.parse_args()
 if args.version:
     echo.version(version, codename)
 else:
-    args.text = args.text.encode("utf-8")
+    encoded = args.text.encode("utf-8")
     if args.image:
-    	if len(args.image) == 1:
-    		twitter.post.one_image(args.text, args.image)
-    	elif len(args.image) >= 2:
-    		twitter.post.multi_images(args.text, args.image, 4)
+    	length = len(arg.image)
+    	if length == 1:
+    		twitter.post.one_image(encoded, args.image)
+    	elif length >= 2 and length < 5:
+    		twitter.post.multi_images(encoded, args.image)
     else:
-    	twitter.post.text_only(args.text)
+    	twitter.post.text_only(encoded)
