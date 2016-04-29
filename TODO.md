@@ -1,11 +1,7 @@
-##### Next:
-
-- [ ] Use Exceptions instead of simple errors (`echo.error()`).
-- [ ] Simple Qt5 UI.
-
 ##### 1.2:
 
 - [ ] Add link shortener.
+- [ ] Use Exceptions instead of simple errors (`echo.error()`).
 
 ##### 1.1:
 

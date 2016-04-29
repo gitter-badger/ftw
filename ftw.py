@@ -27,5 +27,7 @@ else:
     		twitter.post.one_image(encoded, args.image)
     	elif length >= 2 and length < 5:
     		twitter.post.multi_images(encoded, args.image)
+    	elif length >= 5:
+    		echo.error("the maximium supported images are 4!", 1)
     else:
     	twitter.post.text_only(encoded)
