@@ -43,6 +43,7 @@ class post:
         info("sending tweet: {}".format(text))
         info("adding images: {}".format(images))
         image_ids = []
+        # Ugly hack
         if len(images) >= 1:
             with open(images[0], "rb") as image_file:
                 image_data = image_file.read()
