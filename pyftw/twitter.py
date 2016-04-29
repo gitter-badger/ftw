@@ -31,7 +31,7 @@ class post:
         check_chars(text, 140)
         info("sending tweet: %s" % text)
         info("adding image: %s" % image)
-        image = images[0]
+        image == images[0]
         with open(image, "rb") as image_file:
             image_data = image_file.read()
         upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))

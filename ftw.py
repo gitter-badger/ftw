@@ -12,7 +12,7 @@ codename = "Albatross"
 
 parser = argparse.ArgumentParser(prog="ftw", description="terminal tweeting, ftw!")
 parser.add_argument("text", type=str, nargs="?", help="tweet text")
-parser.add_argument("-i", "--image", metavar="file", nargs="*", help="add one or more images")
+parser.add_argument("-i", "--image", metavar="file", nargs="+", help="add one or more images")
 parser.add_argument("-v", "--version", action="store_true", help="show version")
 
 args = parser.parse_args()
@@ -22,7 +22,7 @@ if args.version:
 else:
     args.text = args.text.encode("utf-8")
     if args.image:
-    	if len(args.image) = 1:
+    	if len(args.image) == 1:
     		twitter.post.one_image(args.text, args.image)
     	elif len(args.image) >= 2:
     		twitter.post.multi_images(args.text, args.image)

@@ -19,6 +19,5 @@ setup(name="ftw",
       url="https://github.com/feskyde/ftw",
       license="GPLv2",
       py_modules=["ftw", "pyftw.twitter", "pyftw.echo", "pyftw.common"],
-      scripts=['bin/ftw'],
       install_requires=["twitter"]
       )
