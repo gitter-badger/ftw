@@ -12,7 +12,6 @@
 - The `pyftw` libraries:
   - `twitter`: a wrapper around the [@sixohsix's `twitter` module](https://github.com/sixohsix/twitter).
   - `echo`: my custom modifications for the `print()` function.
-  - `common`: those functions that doesn't use the `twitter` module or anything and I will use a lot.
 
 ### Dependencies:
 

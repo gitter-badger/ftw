@@ -7,12 +7,15 @@
 import os
 from twitter import *
 from .echo import error, info
-from .common import check_chars
 
 key = "hQGQlPsTIN7iIsLVe6aHXycF0"
 key_secret = "3vZ7Q1kPf3zkIBJEKxEL9FJr9WItEzmMz8ZjiU6Ozxm3tnSjJF"
 
-twitter_creds = os.path.expanduser("~/.ftw_auth")
+creds_dir = os.path.expanduser("~/.ftw")
+creds_file = "credentials"
+twitter_creds = os.path.expanduser(creds_dir + "/" + creds_file)
+if not os.path.exists(creds_dir):
+    os.mkdir(creds_dir)
 if not os.path.exists(twitter_creds):
     oauth_dance("Fast Tweet on Shell", key, key_secret, twitter_creds)
 
@@ -20,15 +23,19 @@ token, token_key = read_token_file(twitter_creds)
 
 twitter = Twitter(auth=OAuth(token, token_key, key, key_secret))
 
+def max_chars(text, lenght):
+    if len(text) > lenght:
+        error("your tweet needs to be {} characters maximium!".format(lenght), 1)
+
 class post:
     def text_only(text):
-        check_chars(text, 140)
+        max_chars(text, 140)
         info("sending tweet: {}".format(text))
         twitter.statuses.update(status=text)
         info("sent sucessfully!")
 
     def one_image(text, image):
-        check_chars(text, 140)
+        max_chars(text, 140)
         info("sending tweet: {}".format(text))
         info("adding image: {}".format(image))
         with open(image[0], "rb") as image_file:
@@ -39,7 +46,7 @@ class post:
         info("sent sucessfully!")
 
     def multi_images(text, images):
-        check_chars(text, 140)
+        max_chars(text, 140)
         info("sending tweet: {}".format(text))
         info("adding images: {}".format(images))
         image_ids = []
