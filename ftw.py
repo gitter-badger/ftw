@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Fast Tweet 1.0.1
+# Fast Tweet 1.1
 #
 
 import argparse
-from fastw import twitter, echo
+from pyftw import twitter, echo
 
-version = "1.0.1"
-codename = "Budgie"
+version = "1.1"
+codename = "Albatross"
 
 parser = argparse.ArgumentParser(prog="ftw", description="terminal tweeting, ftw!")
 parser.add_argument("text", type=str, nargs="?", help="tweet text")
@@ -22,6 +22,9 @@ if args.version:
 else:
     args.text = args.text.encode("utf-8")
     if args.image:
-       twitter.post.with_images(args.text, args.image)
+    	if len(args.image) = 1:
+    		twitter.post.one_image(args.text, args.image)
+    	elif len(args.image) >= 2:
+    		twitter.post.multi_images(args.text, args.image)
     else:
-       twitter.post.text_only(args.text)
+    	twitter.post.text_only(args.text)

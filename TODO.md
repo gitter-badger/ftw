@@ -1,10 +1,9 @@
 ##### Next:
 
 - [ ] Use Exceptions instead of simple errors (`echo.error()`).
-- [ ] Add command for removing last tweet.
 - [ ] Simple Qt5 UI.
 
-##### 1.0.1:
+##### 1.1:
 
 - [ ] Allow updating from 1 to 4 image files (**IN PROCESS**).
 - [x] Add UTF-8 support to tweets (emojis!).

@@ -26,4 +26,3 @@ def warning(msg):
 
 def version(ver, name):
     print("version: %s \"%s\"" % (ver, name))
-    sys.exit(0)
