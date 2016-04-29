@@ -31,21 +31,71 @@ class post:
         check_chars(text, 140)
         info("sending tweet: {}".format(text))
         info("adding image: {}".format(image))
-        with open(image, "rb") as image_file:
+        with open(image[0], "rb") as image_file:
             image_data = image_file.read()
         upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
         image_id = upload_to.media.upload(media=image_data)["media_id_string"]
-        twitter.statuses.update(status=text, media_ids=",".join([image_id]))
+        twitter.statuses.update(status=text, media_ids=image_id)
         info("sent sucessfully!")
 
     def multi_images(text, images):
         check_chars(text, 140)
         info("sending tweet: {}".format(text))
         info("adding images: {}".format(images))
-        for image in images:
-            with open(image, "rb") as image_file:
+        image_ids = []
+        if len(images) == 1:
+            with open(images[0], "rb") as image_file:
                 image_data = image_file.read()
             upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
-            image_id = upload_to.media.upload(media=image_data)["media_id_string"]
-        twitter.statuses.update(status=text, media_ids=",".join(image_id))
+            image_id_1 = upload_to.media.upload(media=image_data)["media_id_string"]
+            image_ids.append(image_id_1)
+        elif len(images) == 2:
+            with open(images[0], "rb") as image_file:
+                image_data = image_file.read()
+            upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
+            image_id_1 = upload_to.media.upload(media=image_data)["media_id_string"]
+            image_ids.append(image_id_1)
+            with open(images[1], "rb") as image_file:
+                image_data = image_file.read()
+            upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
+            image_id_2 = upload_to.media.upload(media=image_data)["media_id_string"]
+            image_ids.append(image_id_2)
+        elif len(images) == 3:
+            with open(images[0], "rb") as image_file:
+                image_data = image_file.read()
+            upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
+            image_id_1 = upload_to.media.upload(media=image_data)["media_id_string"]
+            image_ids.append(image_id_1)
+            with open(images[1], "rb") as image_file:
+                image_data = image_file.read()
+            upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
+            image_id_2 = upload_to.media.upload(media=image_data)["media_id_string"]
+            image_ids.append(image_id_2)
+            with open(images[2], "rb") as image_file:
+                image_data = image_file.read()
+            upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
+            image_id_3 = upload_to.media.upload(media=image_data)["media_id_string"]
+            image_ids.append(image_id_3)
+        elif len(images) == 4:
+            with open(images[0], "rb") as image_file:
+                image_data = image_file.read()
+            upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
+            image_id_1 = upload_to.media.upload(media=image_data)["media_id_string"]
+            image_ids.append(image_id_1)
+            with open(images[1], "rb") as image_file:
+                image_data = image_file.read()
+            upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
+            image_id_2 = upload_to.media.upload(media=image_data)["media_id_string"]
+            image_ids.append(image_id_2)
+            with open(images[2], "rb") as image_file:
+                image_data = image_file.read()
+            upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
+            image_id_3 = upload_to.media.upload(media=image_data)["media_id_string"]
+            image_ids.append(image_id_3)
+            with open(images[3], "rb") as image_file:
+                image_data = image_file.read()
+            upload_to = Twitter(domain="upload.twitter.com", auth=OAuth(token, token_key, key, key_secret))
+            image_id_4 = upload_to.media.upload(media=image_data)["media_id_string"]
+            image_ids.append(image_id_4)
+        twitter.statuses.update(status=text, media_ids=",".join(image_ids))
         info("sent sucessfully!")

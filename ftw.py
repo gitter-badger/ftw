@@ -22,7 +22,7 @@ if args.version:
 else:
     encoded = args.text.encode("utf-8")
     if args.image:
-    	length = len(arg.image)
+    	length = len(args.image)
     	if length == 1:
     		twitter.post.one_image(encoded, args.image)
     	elif length >= 2 and length < 5:
