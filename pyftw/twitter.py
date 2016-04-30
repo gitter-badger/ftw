@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Twitter module for Fast Tweet
+# FTW 1.2
+# FTW Twitter functions
 #
 
 import os
+from .printer import info, error
 from twitter import *
-from .echo import error, info
 
 key = "hQGQlPsTIN7iIsLVe6aHXycF0"
 key_secret = "3vZ7Q1kPf3zkIBJEKxEL9FJr9WItEzmMz8ZjiU6Ozxm3tnSjJF"

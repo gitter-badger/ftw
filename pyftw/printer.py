@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Print function modifications for Fast Tweet
+# FTW 1.2
+# print() modifications
 #
 
 import sys

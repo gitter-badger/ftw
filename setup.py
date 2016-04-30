@@ -10,7 +10,7 @@ def get_readme(readme):
         return r.read()
 
 setup(name="ftw",
-      version="1.1",
+      version="1.2",
       description="Terminal tweeting, FTW!",
       long_description=get_readme("README.md"),
       keywords="twitter terminal ftw tweet",
@@ -18,6 +18,6 @@ setup(name="ftw",
       author_email="federicodamians@gmail.com",
       url="https://github.com/feskyde/ftw",
       license="GPLv2",
-      py_modules=["ftw", "pyftw.twitter", "pyftw.echo", "pyftw.common"],
-      install_requires=["twitter"]
+      py_modules=["ftw", "pyftw.twitter", "pyftw.shortener", "pyftw.printer"],
+      install_requires=["twitter", "pyshorteners"]
       )
