@@ -8,14 +8,14 @@
 from .printer import info, error
 from pyshorteners import Shortener
 
-class utils:
-    def shorten_url(service, url):
-        if service == "google":
-            shortener = Shortener("Google", api_key=api_key)
-        elif service == "bitly":
-            shortener = Shortener("Bitly", bitly_token=access_token)
-        elif service == "owly":
-            shortener = Shortener("Owly", api_key=api_key)
-        else:
-            shortener = Shortener("Tinyurl")
-        shortened_url = shortener.short(url)
+def shorten_url(url, service):
+  if service == "google":
+    shortener = Shortener("Google", api_key=api_key)
+  elif service == "bitly":
+    shortener = Shortener("Bitly", bitly_token=access_token)
+  elif service == "owly":
+    shortener = Shortener("Owly", api_key=api_key)
+  elif service == "tinyurl":
+    shortener = Shortener("Tinyurl")
+  shortened_url = shortener.short(url)
+  return shortened_url

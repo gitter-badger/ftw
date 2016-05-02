@@ -33,4 +33,11 @@ else:
         elif length >= 5:
             printer.error("the maximium supported images are 4!", 1)
     else:
+      if args.url:
+        if args.shortener:
+          shortened_url = shortener.shorten_url(args.url, args.shortener)
+        else:
+          shortened_url = shortener.shorten_url(args.url, "tinyurl")
+          twitter.post.text_only(encoded + "" + sortened_url)
+      else:
         twitter.post.text_only(encoded)
