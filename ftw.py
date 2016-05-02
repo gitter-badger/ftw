@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# FTW 1.2
+# FTW 1.3
 # Main script
 #
 
 import argparse
 from pyftw import twitter, shortener, printer
 
-version = "1.2"
+version = "1.3"
 codename = "Albatross"
 
 parser = argparse.ArgumentParser(prog="ftw", description="terminal tweeting, ftw!")
