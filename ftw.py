@@ -6,10 +6,13 @@
 #
 
 import argparse
-from pyftw import twitter, shortener, printer
+from pyftw import twitter, oauth, shortener, printer
 
+app_name = "Fast Tweet on Shell"
 version = "1.3"
 codename = "Albatross"
+key = "hQGQlPsTIN7iIsLVe6aHXycF0"
+key_secret = "3vZ7Q1kPf3zkIBJEKxEL9FJr9WItEzmMz8ZjiU6Ozxm3tnSjJF"
 
 parser = argparse.ArgumentParser(prog="ftw", description="terminal tweeting, ftw!")
 parser.add_argument("text", type=str, nargs="?", help="tweet text")
@@ -19,6 +22,14 @@ parser.add_argument("-s", "--shortener", metavar="shortener", default="tinyurl",
 parser.add_argument("-v", "--version", action="store_true", help="show version")
 
 args = parser.parse_args()
+
+creds_dir = os.path.expanduser("~/.ftw")
+creds_file = "credentials"
+twitter_creds = os.path.expanduser(creds_dir + "/" + creds_file)
+if not os.path.exists(twitter_creds):
+    if not os.path.exists(creds_dir):
+        os.mkdir(creds_dir)
+    oauth.authorize(key, key_secret)
 
 if args.version:
     printer.version(version, codename)
