@@ -5,7 +5,6 @@
 # Shortener functions
 #
 
-from .printer import info, error
 from pyshorteners import Shortener
 
 def shorten_url(url, service):

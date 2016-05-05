@@ -5,6 +5,7 @@
 # Main script
 #
 
+import os
 import argparse
 from pyftw import twitter, oauth, shortener, printer
 
@@ -23,17 +24,10 @@ parser.add_argument("-v", "--version", action="store_true", help="show version")
 
 args = parser.parse_args()
 
-creds_dir = os.path.expanduser("~/.ftw")
-creds_file = "credentials"
-twitter_creds = os.path.expanduser(creds_dir + "/" + creds_file)
-if not os.path.exists(twitter_creds):
-    if not os.path.exists(creds_dir):
-        os.mkdir(creds_dir)
-    oauth.authorize(key, key_secret)
-
 if args.version:
     printer.version(version, codename)
 else:
+    oauth.authorize(app_name, key, key_secret)
     encoded = args.text.encode("utf-8")
     if args.image:
         length = len(args.image)

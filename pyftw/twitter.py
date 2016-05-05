@@ -5,9 +5,11 @@
 # Twitter functions
 #
 
-import os
 from .printer import info, error
+from .oauth import authorize
 from twitter import *
+
+twitter = authorize.twitter
 
 def max_chars(text, lenght):
     if len(text) > lenght:
