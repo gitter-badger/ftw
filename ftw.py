@@ -1,19 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# FTW 1.3
+# FTW
 # Main script
 #
 
 import os
 import argparse
 from pyftw import twitter, oauth, shortener, printer
-
-app_name = "Fast Tweet on Shell"
-version = "1.3"
-codename = "Albatross"
-key = "hQGQlPsTIN7iIsLVe6aHXycF0"
-key_secret = "3vZ7Q1kPf3zkIBJEKxEL9FJr9WItEzmMz8ZjiU6Ozxm3tnSjJF"
+from pyftw.program import data
 
 parser = argparse.ArgumentParser(prog="ftw", description="terminal tweeting, ftw!")
 parser.add_argument("text", type=str, nargs="?", help="tweet text")
@@ -25,9 +20,8 @@ parser.add_argument("-v", "--version", action="store_true", help="show version")
 args = parser.parse_args()
 
 if args.version:
-    printer.version(version, codename)
-else:
-    oauth.authorize(app_name, key, key_secret)
+    printer.version(data.app_name, data.short_name, data.version, data.codename)
+elif args.text:
     encoded = args.text.encode("utf-8")
     if args.image:
         length = len(args.image)
@@ -36,7 +30,7 @@ else:
         elif length >= 2 and length < 5:
             twitter.post.multi_images(encoded, args.image)
         elif length >= 5:
-            printer.error("the maximium supported images are 4!", 1)
+            printer.error("the maximium supported images are 4")
     else:
       if args.url:
         if args.shortener:
@@ -46,3 +40,5 @@ else:
           twitter.post.text_only(encoded + "" + sortened_url)
       else:
         twitter.post.text_only(encoded)
+else:
+    printer.error("please insert any argument (use -h if you need help)")

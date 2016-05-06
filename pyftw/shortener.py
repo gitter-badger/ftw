@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# FTW 1.3
-# Shortener functions
+# FTW
+# Shortener module (WIP)
 #
 
 from pyshorteners import Shortener

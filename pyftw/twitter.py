@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# FTW 1.3
-# Twitter functions
+# FTW
+# Twitter module
 #
 
 from .printer import info, error
-from .oauth import authorize
+from .oauth import module
 from twitter import *
 
-twitter = authorize.twitter
+twitter = module.authorized
 
 def max_chars(text, lenght):
     if len(text) > lenght:

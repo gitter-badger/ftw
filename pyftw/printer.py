@@ -17,13 +17,13 @@ class color:
 def info(msg):
     print(color.green + "[info] {}".format(msg) + color.none)
 
-def error(msg, code):
+def error(msg):
     print(color.red + "[error] {}".format(msg) + color.none)
-    print(color.red + "[error] exiting with code {}".format(code) + color.none)
-    sys.exit(code)
+    print(color.red + "[error] exiting with code 1" + color.none)
+    sys.exit(1)
 
 def warning(msg):
     print(color.yellow + "[warning] {}".format(msg) + color.none)
 
-def version(ver, name):
-    print("version: {} \"{}\"".format(ver, name))
+def version(app, short, ver, name):
+    print("{} ({}) version: {} \"{}\"".format(app, short, ver, name))

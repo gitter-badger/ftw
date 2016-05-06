@@ -1,27 +1,46 @@
-# Fast Tweet (ftw)
+# ftw
 
 ### What's this?:
 
-**In short words**: Terminal tweeting **FTW**! :smile:.
+**In short words**: Terminal tweeting, **ftw**! :smile:.
 
-**In long words**: A tweeting client without shiny prompts, bright letters or fireworks, just a single command for a single tweet (yeah, UNIX style!<sup>[2](#footnotes-2)</sup>).
+**In long words**: A Python 3 based tweeting client without shiny prompts, bright letters or fireworks, just a single command for a single tweet (yeah, UNIX style!<sup>[1](#footnotes-1)</sup>).
 
 ### Dependencies:
 
-#### From PyPI<sup>[3](#footnotes-3)</sup>:
+#### From PyPI:
 
 - `twitter`.
-- `pyshorteners`
+- `pyshorteners`.
+
+### Includes:
+
+- The `pyftw` modules:
+  - `twitter`: a twitter wrapper around the @sixosix API for Python.
+  - `oauth`: a wrapper around the Twitter API OAuth module.
+  - `program`: the program data.
+  - `shortener`: a WIP wrapper for `pyshorteners`.
+  - `printer`: my custom modifications for `print()` function.
+- The `ftw.py` program.
+- The `setup.py` script.
+
+#### And those things:
+
+- A `MANIFEST` file for pulling the `README` in the building.
+- A `TODO` file.
+- GIT-related files.
+- The GPL version 2 license.
+- This `README`.
 
 ### Installing:
 
-Just a `python setup.py install`.
+Just a `python3 setup.py install`.
 
 ### Running:
 
 Simply type `ftw "tweet text"`, or `ftw "tweet text" -i file.png` if you want to add a image.
 
-Since v1.1 you can add from 1 to 4 images<sup>[4](#footnotes-4)</sup>, how? Simply type `ftw "tweet text" -i file1.png file2.png file3.jpg`...
+Since v1.1 you can add from 1 to 4 images<sup>[2](#footnotes-2)</sup>, how? Simply type `ftw "tweet text" -i file1.png file2.png file3.jpg`...
 
 ### TODO:
 
@@ -36,18 +55,12 @@ Check the [TODO.md](https://github.com/feskyde/ftw/blob/master/TODO.md) file.
 
 ### License:
 
-**Fast Tweet** is released under the GNU General Public License version 2.
+**FTW** is released under the GNU General Public License version 2.
 
-#### Footnotes<sup>[1](#footnotes-1)</sup>:
+#### Footnotes<sup>[3](#footnotes-3)</sup>:
 
-<a name="footnotes-1">1</a>: Made in the derpest way possible 'cause my dear GitHub friends does not support them.
+<a name="footnotes-1">1</a>: I'm waiting for the `systemd` people creating a `systemd-tweet` module (**SPOILER ALERT:** they will do it).
 
-<a name="footnotes-2">2</a>: I'm waiting for the `systemd` people creating a `systemd-tweet` module (**SPOILER ALERT**: they will do it).
+<a name="footnotes-2">2</a>: Thanks to some ugly lines of code.
 
-<a name="footnotes-3">3</a>: Sounds like pee in Spanish (pronounced "pee-pee")<sup>[5](#footnotes-5)</sup><sup>[6](#footnotes-6)</sup> :smile:.
-
-<a name="footnotes-4">4</a>: Thanks to some ugly lines of code.
-
-<a name="footnotes-5">5</a>: Maturity FTW!
-
-<a name="footnotes-6">6</a>: Footnote-ception.
+<a name="footnotes-3">3</a>: Made in the derpest way possible 'cause my dear GitHub friends does not support them.
