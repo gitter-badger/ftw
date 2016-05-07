@@ -3,6 +3,7 @@
 - [ ] Add link shortener.
 - [ ] Use Exceptions instead of simple errors (`echo.error()`).
 - [ ] Fix UTF-8 character printing.
+- [ ] Allow installing from network (`install.sh`)
 
 ##### 1.1.1:
 
