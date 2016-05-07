@@ -16,13 +16,16 @@
 ### Includes:
 
 - The `pyftw` modules:
+  - The `__init__` and `__main__` thingies.
   - `twitter`: a twitter wrapper around the @sixosix API for Python.
   - `oauth`: a wrapper around the Twitter API OAuth module.
   - `program`: the program data.
   - `shortener`: a WIP wrapper for `pyshorteners`.
   - `printer`: my custom modifications for `print()` function.
-  - The `__init__` and `__main__` thingies.
-- The `setup.py` script.
+- The `setup.py` script...
+- ...that is wrapped by the `Makefile`...
+- ...that is wrapped by the `install.sh` script.
+- A `requeriments.txt` file (why? no idea).
 - The `ftw` executable.
 
 #### And those things:
@@ -56,7 +59,7 @@ Check the [TODO.md](https://github.com/feskyde/ftw/blob/master/TODO.md) file.
 
 ### License:
 
-**FTW** is released under the GNU General Public License version 2.
+**ftw** is released under the GNU General Public License version 2.
 
 #### Footnotes<sup>[3](#footnotes-3)</sup>:
 
