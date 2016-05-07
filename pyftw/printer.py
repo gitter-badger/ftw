@@ -26,4 +26,6 @@ def warning(msg):
 	print(color.yellow + "[warning] {}".format(msg) + color.none)
 
 def version(app, short, ver, name):
-	print("{} ({}) version: {} \"{}\"".format(app, short, ver, name))
+	python_major = sys.version_info.major
+	python_minor = sys.version_info.minor
+	print("{} ({}) version: {} \"{}\", running on Python {}.{}".format(app, short, ver, name, python_major, python_minor))

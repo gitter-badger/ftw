@@ -21,8 +21,9 @@
   - `program`: the program data.
   - `shortener`: a WIP wrapper for `pyshorteners`.
   - `printer`: my custom modifications for `print()` function.
-- The `ftw.py` program.
+  - The `__init__` and `__main__` thingies.
 - The `setup.py` script.
+- The `ftw` executable.
 
 #### And those things:
 
@@ -34,7 +35,7 @@
 
 ### Installing:
 
-Just a `python3 setup.py install`.
+Just a `./install.sh`.
 
 ### Running:
 
@@ -50,8 +51,8 @@ Check the [TODO.md](https://github.com/feskyde/ftw/blob/master/TODO.md) file.
 
 | Status | Release | Codename | Date | Release Notes | Changelog | Download |
 |--------|---------|----------|------|---------------|-----------|----------|
-| **Current** | 1.1 | "Albatross" | 04/29/2016 | [HERE](https://github.com/feskyde/ftw/releases/tag/v1.1) | [HERE](https://github.com/feskyde/ftw/compare/v1.1...v1.2) | [ZIP](https://github.com/feskyde/ftw/archive/ftw-1.1.zip) / [EXE](https://www.youtube.com/watch?v=oHg5SJYRHA0 "Click this without doubts, you will not get rickroll'd :)") |
-| **Development** | 1.2 | "Albatross" | *I don't know* | *What?* | I have [THIS](https://github.com/feskyde/ftw/compare/v1.1...master) | *Not available* |
+| **Current** | v1.1.1 | "Albatross" | 05/07/2016 | [HERE](https://github.com/feskyde/ftw/releases/tag/v1.1.1) | [HERE](https://github.com/feskyde/ftw/compare/v1.1...v1.1.1) | [TARBALL](https://github.com/feskyde/ftw/archive/ftw-1.1.1.tar.gz) / [WINEXEC](https://www.youtube.com/watch?v=oHg5SJYRHA0 "Click this without doubts, you will not get rickroll'd :)") |
+| **Development** | v1.2 | "Albatross" | *I don't know* | *What?* | I have [THIS](https://github.com/feskyde/ftw/compare/v1.1.1...master) | *Not available* |
 
 ### License:
 

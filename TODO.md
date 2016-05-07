@@ -2,6 +2,11 @@
 
 - [ ] Add link shortener.
 - [ ] Use Exceptions instead of simple errors (`echo.error()`).
+- [ ] Fix UTF-8 character printing.
+
+##### 1.1.1:
+
+- [x] Add a executable on system `PATH`.
 
 ##### 1.1:
 

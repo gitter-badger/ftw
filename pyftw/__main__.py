@@ -8,7 +8,9 @@
 import os
 import argparse
 from pyftw import twitter, oauth, shortener, printer
-from pyftw.program import data
+from pyftw.program import data, check
+
+check.pyver()
 
 parser = argparse.ArgumentParser(prog="ftw", description="terminal tweeting, ftw!")
 parser.add_argument("text", type=str, nargs="?", help="tweet text")
