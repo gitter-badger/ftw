@@ -5,7 +5,12 @@
 # Setup file for FTW
 #
 
+import sys
 from distutils.core import setup
+
+if sys.version <= (2, 7):
+	print("ftw is not compatible (at the moment) with Python 2 :(")
+	sys.exit(1)
 
 def get_readme(readme):
 	with open(readme) as r:
