@@ -6,7 +6,7 @@
 #
 
 import os
-from .program import data
+from .common import data
 from twitter import *
 
 app_name = data.app_name
@@ -21,5 +21,5 @@ if not os.path.exists(twitter_creds):
 	oauth_dance(app_name, key, key_secret, twitter_creds)
 token, token_key = read_token_file(twitter_creds)
 
-class module:
-	authorized = Twitter(auth=OAuth(token, token_key, key, key_secret))
+class api:
+	authenticated = Twitter(auth=OAuth(token, token_key, key, key_secret))

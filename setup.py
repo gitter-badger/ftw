@@ -7,7 +7,7 @@
 
 import sys
 from distutils.core import setup
-from pyftw import program
+from pyftw import common.data.version as ftw_ver
 
 if sys.version_info.major <= 2:
 	print("ftw is not compatible (at the moment) with Python 2 :(")
@@ -17,7 +17,7 @@ def get_readme():
 	with open("README.md") as r:
 		return r.read()
 
-setup(name="ftw", version=program.data.version,
+setup(name="ftw", version=ftw_ver,
 		description="Terminal tweeting, FTW!",
 		long_description=get_readme(),
 		keywords="twitter terminal ftw tweet",
@@ -26,7 +26,6 @@ setup(name="ftw", version=program.data.version,
 		url="https://github.com/feskyde/ftw",
 		license="GPLv2",
 		py_modules=["pyftw.__main__", "pyftw.__init__",
-					"pyftw.oauth", "pyftw.printer", "pyftw.program",
-					"pyftw.twitter", "pyftw.shortener"],
+					"pyftw.common", "pyftw.oauth", "pyftw.wrapper"],
 		scripts=["ftw"],
 		)

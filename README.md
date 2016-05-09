@@ -17,14 +17,12 @@
 
 - The `pyftw` modules:
   - The `__init__` and `__main__` thingies.
-  - `twitter`: a twitter wrapper around the @sixosix API for Python.
+  - `common`: some common functions and program data (replaces `printer` and `program`).
+  - `wrapper`: a `twitter` wrapper around the @sixosix API for Python and the PyShorteners module.
   - `oauth`: a wrapper around the Twitter API OAuth module.
-  - `program`: the program data.
-  - `shortener`: a WIP wrapper for `pyshorteners`.
-  - `printer`: my custom modifications for `print()` function.
-- The `setup.py` script...
-- ...that is wrapped by the `Makefile`...
-- ...that is wrapped by the `install.sh` script.
+- A `setup.py` script...
+- ...that is wrapped by a `Makefile`...
+- ...that is wrapped by an `install.sh` script.
 - A `requeriments.txt` file (why? no idea).
 - The `ftw` executable.
 

@@ -1,7 +1,7 @@
 ##### 1.2:
 
 - [ ] Add link shortener.
-- [ ] Use Exceptions instead of simple errors (`echo.error()`).
+- [ ] Use Exceptions instead of simple errors (`common.printer.error()`).
 - [ ] Fix UTF-8 character printing.
 - [ ] Allow installing from network (`install.sh`)
 
